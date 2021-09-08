@@ -1,11 +1,12 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useContext, useState, useCallback, useEffect } from 'react';
 import useWebSocket, { ReadyState } from 'react-native-use-websocket';
 import { StoreContext } from '../context/storeContext';
 
 export const useSocket = () => {
-    const { actions } = React.useContext(StoreContext)
+    const { actions } = useContext(StoreContext)
 
-    const { sendMessage, lastMessage, readyState, getWebSocket } = useWebSocket('ws://localhost:8000', {
+    const [socketUrl] = useState("ws://localhost:3000");
+    const { sendMessage, lastMessage, readyState, getWebSocket } = useWebSocket(socketUrl, {
         shouldReconnect: (closeEvent) => true,
         reconnectAttempts: 10,
         reconnectInterval: 5000,

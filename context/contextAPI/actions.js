@@ -77,6 +77,32 @@ const chattingActions = (props) => {
     }
 }
 
+let writer;
+
+const UpdateWriter = (sendMessage) => {
+    writer = sendMessage
+}
+
+const Writer = (props, json) => {
+    if (writer !== undefined) {
+        writer(JSON.stringify(json))
+    } else {
+        console.log("[SEND-FAIL] WEBSOCKET WRITER IS NOT SET")
+    }
+}
+
+const WriterChatMessage = (json) => {
+    if (writer !== undefined) {
+        writer(JSON.stringify(json))
+    }
+}
+
+const CreateChatRoom = (json) => {
+    if (writer !== undefined) {
+        writer(JSON.stringify(json))
+    }
+}
+
 export const useActions = (state, dispatch) => {
     return {
         chattingActions: chattingActions({ state, dispatch }),
