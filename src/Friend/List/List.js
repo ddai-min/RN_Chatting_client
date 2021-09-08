@@ -5,10 +5,10 @@ import {
     Header,
     Text
 } from 'native-base';
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import ListKind from './ListKind';
 
-export default function List({navigation}) {
+export default function List({ navigation }) {
     return (
         <Container>
             <Header alignItems='center'>
@@ -21,8 +21,8 @@ export default function List({navigation}) {
     );
 }
 
-const styles=StyleSheet.create({
-    textStyle:{
-        fontSize:25
+const styles = StyleSheet.create({
+    textStyle: {
+        fontSize: 25
     }
 });

@@ -5,10 +5,10 @@ import {
     Header,
     Text
 } from 'native-base';
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import RecommendKind from './RecommendKind';
 
-export default function Recommend({navigation}) {
+export default function Recommend({ navigation }) {
     return (
         <Container>
             <Header alignItems='center'>
@@ -21,8 +21,8 @@ export default function Recommend({navigation}) {
     )
 }
 
-const styles=StyleSheet.create({
-    textStyle:{
-        fontSize:25
+const styles = StyleSheet.create({
+    textStyle: {
+        fontSize: 25
     }
 });

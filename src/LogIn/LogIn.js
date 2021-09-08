@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     Badge,
     Body,
@@ -22,7 +22,7 @@ import axios from 'axios';
 
 const HOST = "172.30.1.26:3000";
 
-export default function LogIn({navigation}) {
+export default function LogIn({ navigation }) {
     const [id, setId] = useState("")
     const [password, setPassword] = useState("")
     const [idError, setIdError] = useState("")
@@ -81,8 +81,8 @@ export default function LogIn({navigation}) {
                     </Item>
                     {
                         idError.length > 0 && <Badge danger>
-                                <Text>{idError}</Text>
-                            </Badge>
+                            <Text>{idError}</Text>
+                        </Badge>
                     }
                     <Item last>
                         <Input
@@ -92,8 +92,8 @@ export default function LogIn({navigation}) {
                     </Item>
                     {
                         passwordError.length > 0 && <Badge danger>
-                                <Text>{passwordError}</Text>
-                            </Badge>
+                            <Text>{passwordError}</Text>
+                        </Badge>
                     }
                 </Form>
             </Content>
@@ -103,9 +103,10 @@ export default function LogIn({navigation}) {
                         <Text note style={styles.textStyle}>회원이 아니신가요?</Text>
                     </Left>
                     <Right>
-                        <Button style={styles.tinyButton,styles.container}
-                        onPress={() => {
-                        navigation.navigate("Membership")}}>
+                        <Button style={styles.tinyButton, styles.container}
+                            onPress={() => {
+                                navigation.navigate("Membership")
+                            }}>
                             <Text>회원가입</Text>
                         </Button>
                     </Right>
@@ -122,19 +123,19 @@ export default function LogIn({navigation}) {
     );
 }
 
-const styles=StyleSheet.create({
-    tinyButton:{
-        width:80,
-        height:30
+const styles = StyleSheet.create({
+    tinyButton: {
+        width: 80,
+        height: 30
     },
-    container:{
-        justifyContent:'center',
-        alignItems:'center'
+    container: {
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    textStyle:{
-        fontSize:20
+    textStyle: {
+        fontSize: 20
     },
-    headTextStyle:{
-        fontSize:25
+    headTextStyle: {
+        fontSize: 25
     }
 });

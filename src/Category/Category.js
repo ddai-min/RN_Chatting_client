@@ -10,10 +10,10 @@ import {
     Text,
     CheckBox
 } from 'native-base';
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export default function Category({navigation}) {
-    const [checked,setChecked]=useState(false);
+export default function Category({ navigation }) {
+    const [checked, setChecked] = useState(false);
     return (
         <Container>
             <Header alignItems='center'>
@@ -22,24 +22,24 @@ export default function Category({navigation}) {
             <Content>
                 <ListItem>
                     <CheckBox
-                    checked={false}
-                    onPress={()=>setChecked(!checked)}></CheckBox>
+                        checked={false}
+                        onPress={() => setChecked(!checked)}></CheckBox>
                     <Body>
                         <Text>언어를 배우고 싶어요</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
                     <CheckBox
-                    checked={false}
-                    onPress={()=>setChecked(!checked)}></CheckBox>
+                        checked={false}
+                        onPress={() => setChecked(!checked)}></CheckBox>
                     <Body>
                         <Text>여행에 관심 있어요</Text>
                     </Body>
                 </ListItem>
                 <ListItem>
                     <CheckBox
-                    checked={false}
-                    onPress={()=>setChecked(!checked)}></CheckBox>
+                        checked={false}
+                        onPress={() => setChecked(!checked)}></CheckBox>
                     <Body>
                         <Text>스포츠에 관심 있어요</Text>
                     </Body>
@@ -48,7 +48,7 @@ export default function Category({navigation}) {
             <Footer>
                 <Content>
                     <Button full
-                    onPress={()=>{navigation.reset({routes:[{name:"FriendIndex"}]})}}>
+                        onPress={() => { navigation.reset({ routes: [{ name: "FriendIndex" }] }) }}>
                         <Text>다음</Text>
                     </Button>
                 </Content>
@@ -62,4 +62,3 @@ const styles = StyleSheet.create({
         fontSize: 25
     }
 });
-

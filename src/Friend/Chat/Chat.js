@@ -1,8 +1,8 @@
 import React from 'react';
-import {Container, Content, Header, Text, List, ListItem, Left, Body, Right} from 'native-base';
-import {Image, StyleSheet} from 'react-native';
+import { Container, Content, Header, Text, List, ListItem, Left, Body, Right } from 'native-base';
+import { Image, StyleSheet } from 'react-native';
 
-export default function Chat({navigation}) {
+export default function Chat({ navigation }) {
     return (
         <Container>
             <Header alignItems='center'>
@@ -17,8 +17,8 @@ export default function Chat({navigation}) {
                         }}>
                         <Left>
                             <Image
-                            source={require('../img/dog1.png')}
-                            style={styles.imageSize} />
+                                source={require('../img/dog1.png')}
+                                style={styles.imageSize} />
                         </Left>
                         <Body>
                             <Text>권택민</Text>
@@ -35,8 +35,8 @@ export default function Chat({navigation}) {
                         }}>
                         <Left>
                             <Image
-                            source={require('../img/dog2.png')}
-                            style={styles.imageSize} />
+                                source={require('../img/dog2.png')}
+                                style={styles.imageSize} />
                         </Left>
                         <Body>
                             <Text>친구 2</Text>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         fontSize: 25
     },
     imageSize: {
-        width:50,
-        height:50
+        width: 50,
+        height: 50
     }
 });

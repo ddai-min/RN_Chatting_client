@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {Container, Content, Text, Footer, Button} from 'native-base';
-import {StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { Container, Content, Text, Footer, Button } from 'native-base';
+import { StyleSheet } from 'react-native';
 
-export default function Hello({navigation}) {
+export default function Hello({ navigation }) {
     return (
         <Container>
             <Content alignItems='center' justifyContent='center'>
@@ -13,7 +13,7 @@ export default function Hello({navigation}) {
                     <Button
                         full
                         onPress={() => {
-                        navigation.navigate("LogInIndex")
+                            navigation.navigate("LogInIndex")
                         }}>
                         <Text>다음</Text>
                     </Button>

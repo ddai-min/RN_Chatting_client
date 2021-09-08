@@ -1,15 +1,15 @@
 import React from 'react';
-import {List, ListItem, Left, Body, Right, Text, Button} from 'native-base';
-import {Image, StyleSheet} from 'react-native';
+import { List, ListItem, Left, Body, Right, Text, Button } from 'native-base';
+import { Image, StyleSheet } from 'react-native';
 
-export default function RecommendKind({navigation}) {
+export default function RecommendKind({ navigation }) {
     return (
         <List>
             <ListItem thumbnail>
                 <Left>
                     <Image
-                    source={require('../img/lego.png')}
-                    style={styles.imageSize} />
+                        source={require('../img/lego.png')}
+                        style={styles.imageSize} />
                 </Left>
                 <Body>
                     <Text>박우현</Text>
@@ -17,7 +17,7 @@ export default function RecommendKind({navigation}) {
                 </Body>
                 <Right>
                     <Button transparent
-                    onPress={()=>{navigation.navigate("RecommendDetail")}}>
+                        onPress={() => { navigation.navigate("RecommendDetail") }}>
                         <Text>자세히 보기</Text>
                     </Button>
                 </Right>
@@ -25,8 +25,8 @@ export default function RecommendKind({navigation}) {
             <ListItem thumbnail>
                 <Left>
                     <Image
-                    source={require('../img/mango.png')}
-                    style={styles.imageSize} />
+                        source={require('../img/mango.png')}
+                        style={styles.imageSize} />
                 </Left>
                 <Body>
                     <Text>오채연</Text>
@@ -34,7 +34,7 @@ export default function RecommendKind({navigation}) {
                 </Body>
                 <Right>
                     <Button transparent
-                    onPress={()=>{navigation.navigate("RecommendDetail")}}>
+                        onPress={() => { navigation.navigate("RecommendDetail") }}>
                         <Text>자세히 보기</Text>
                     </Button>
                 </Right>
@@ -42,8 +42,8 @@ export default function RecommendKind({navigation}) {
             <ListItem thumbnail>
                 <Left>
                     <Image
-                    source={require('../img/lingo.png')}
-                    style={styles.imageSize} />
+                        source={require('../img/lingo.png')}
+                        style={styles.imageSize} />
                 </Left>
                 <Body>
                     <Text>김현우</Text>
@@ -51,7 +51,7 @@ export default function RecommendKind({navigation}) {
                 </Body>
                 <Right>
                     <Button transparent
-                    onPress={()=>{navigation.navigate("RecommendDetail")}}>
+                        onPress={() => { navigation.navigate("RecommendDetail") }}>
                         <Text>자세히 보기</Text>
                     </Button>
                 </Right>
@@ -60,9 +60,9 @@ export default function RecommendKind({navigation}) {
     );
 }
 
-const styles=StyleSheet.create({
-    imageSize:{
-        width:50,
-        height:50
+const styles = StyleSheet.create({
+    imageSize: {
+        width: 50,
+        height: 50
     }
 })

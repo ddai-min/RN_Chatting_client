@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Badge, Body, Button, Container, Content, Footer, Header, Input, Item, Left, List, ListItem, Text} from 'native-base';
+import { Badge, Body, Button, Container, Content, Footer, Header, Input, Item, Left, List, ListItem, Text } from 'native-base';
 import { StyleSheet, Alert } from 'react-native';
 
 import axios from 'axios';
@@ -8,7 +8,7 @@ import MembershipPicker from './MembershipPicker';
 
 const HOST = "172.30.1.26:3000";
 
-export default function Membership({navigation}){
+export default function Membership({ navigation }) {
     const [id, setId] = useState("")
     const [password1, setPassword1] = useState("")
     const [password2, setPassword2] = useState("")
@@ -97,17 +97,17 @@ export default function Membership({navigation}){
             }
 
             axios({
-                method:"POST",
-                url:`http://${HOST}/membership/`,
-                data:information
-            }).then((res)=>{
+                method: "POST",
+                url: `http://${HOST}/membership/`,
+                data: information
+            }).then((res) => {
                 console.log(res);
-            }).catch(error=>{
+            }).catch(error => {
                 console.log(error);
                 throw new Error(error);
             });
 
-            
+
             setId("");
             setPassword1("");
             setPassword2("");
@@ -118,13 +118,13 @@ export default function Membership({navigation}){
                 "회원가입",
                 "회원가입이 완료되었습니다.",
                 [
-                    {text:"확인"}
+                    { text: "확인" }
                 ]
             );
         }
     }
 
-    return(
+    return (
         <Container>
             <Header style={styles.container}>
                 <Text style={styles.headTextStyle}>정보를 입력해주세요.</Text>
@@ -138,9 +138,9 @@ export default function Membership({navigation}){
                         <Body>
                             <Item regular>
                                 <Input
-                                placeholder='입력'
-                                onChangeText={text => setId(text)}
-                                value={id}></Input>
+                                    placeholder='입력'
+                                    onChangeText={text => setId(text)}
+                                    value={id}></Input>
                             </Item>
                             {
                                 idError.length > 0 && <Badge danger>
@@ -156,9 +156,9 @@ export default function Membership({navigation}){
                         <Body>
                             <Item regular>
                                 <Input
-                                placeholder='입력'
-                                onChangeText={text => setPassword1(text)}
-                                value={password1}></Input>
+                                    placeholder='입력'
+                                    onChangeText={text => setPassword1(text)}
+                                    value={password1}></Input>
                             </Item>
                             {
                                 password1Error.length > 0 && <Badge danger>
@@ -174,9 +174,9 @@ export default function Membership({navigation}){
                         <Body>
                             <Item regular>
                                 <Input
-                                placeholder='입력'
-                                onChangeText={text => setPassword2(text)}
-                                value={password2}></Input>
+                                    placeholder='입력'
+                                    onChangeText={text => setPassword2(text)}
+                                    value={password2}></Input>
                             </Item>
                             {
                                 password2Error.length > 0 && <Badge danger>
@@ -192,9 +192,9 @@ export default function Membership({navigation}){
                         <Body>
                             <Item regular>
                                 <Input
-                                placeholder='입력'
-                                onChangeText={text => setName(text)}
-                                value={name}></Input>
+                                    placeholder='입력'
+                                    onChangeText={text => setName(text)}
+                                    value={name}></Input>
                             </Item>
                             {
                                 nameError.length > 0 && <Badge danger>
@@ -218,9 +218,9 @@ export default function Membership({navigation}){
                         <Body>
                             <Item regular>
                                 <Input
-                                placeholder='입력'
-                                onChangeText={text => setAge(text)}
-                                value={age}></Input>
+                                    placeholder='입력'
+                                    onChangeText={text => setAge(text)}
+                                    value={age}></Input>
                             </Item>
                             {
                                 ageError.length > 0 && <Badge danger>
@@ -242,18 +242,18 @@ export default function Membership({navigation}){
     );
 }
 
-const styles=StyleSheet.create({
-    headTextStyle:{
-        fontSize:25
+const styles = StyleSheet.create({
+    headTextStyle: {
+        fontSize: 25
     },
-    container:{
-        alignItems:'center',
-        justifyContent:'center'
+    container: {
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    listTextStyle:{
-        fontSize:20
+    listTextStyle: {
+        fontSize: 20
     },
-    listStyle:{
-        height:70
+    listStyle: {
+        height: 70
     }
 });

@@ -24,12 +24,12 @@ const messages = [
 
 function sendChat(message) {
   axios({
-    method:"POST",
-    url:`http://${HOST}/chat/`,
-    data:message
-  }).then((res)=>{
+    method: "POST",
+    url: `http://${HOST}/chat/`,
+    data: message
+  }).then((res) => {
     console.log(res);
-  }).catch(error=>{
+  }).catch(error => {
     console.log(error);
     throw new Error(error);
   });
@@ -48,14 +48,14 @@ class ChatDetail extends Component {
     try {
       let res = await axios.get(`http://${HOST}/chat/${USER_ID}`);
       res.data.map(msg => this.addNewMessage(msg));
-    } catch(err) {
+    } catch (err) {
       alert(err);
     }
   }
 
   timerId = null;
-  componentDidMount(){
-    this.timerId=setInterval(this.receiveChat, 2000);
+  componentDidMount() {
+    this.timerId = setInterval(this.receiveChat, 2000);
   }
   componentWillUnmount() {
     clearInterval(this.timerId);

@@ -1,16 +1,16 @@
 import React from 'react';
-import {Image, StyleSheet} from 'react-native';
-import {Body, Card, Left, ListItem, Text} from 'native-base';
+import { Image, StyleSheet } from 'react-native';
+import { Body, Card, Left, ListItem, Text } from 'native-base';
 
-export default function ListKind(){
-    return(
+export default function ListKind() {
+    return (
         <Card>
             <ListItem>
                 <Left>
                     <Body style={styles.container2}>
                         <Image
-                        source={require('../img/dog2.png')}
-                        style={styles.imageSize} />
+                            source={require('../img/dog2.png')}
+                            style={styles.imageSize} />
                         <Text>장수빈</Text>
                     </Body>
                 </Left>
@@ -22,8 +22,8 @@ export default function ListKind(){
                 <Left>
                     <Body style={styles.container2}>
                         <Image
-                        source={require('../img/dog1.png')}
-                        style={styles.imageSize} />
+                            source={require('../img/dog1.png')}
+                            style={styles.imageSize} />
                         <Text>권택민</Text>
                     </Body>
                 </Left>
@@ -35,18 +35,18 @@ export default function ListKind(){
     )
 }
 
-const styles=StyleSheet.create({
-    imageSize:{
-        width:50,
-        height:50
+const styles = StyleSheet.create({
+    imageSize: {
+        width: 50,
+        height: 50
     },
-    container1:{
-        justifyContent:'center',
+    container1: {
+        justifyContent: 'center',
     },
-    container2:{
-        alignItems:'center'
+    container2: {
+        alignItems: 'center'
     },
-    saying:{
-        fontSize:20
+    saying: {
+        fontSize: 20
     }
 });
